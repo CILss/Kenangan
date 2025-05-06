@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Selamat Ulang Tahun, Meyda!</title>
 
   <!-- AOS CSS -->
@@ -74,25 +74,52 @@
 </head>
 <body>
 
-  <h1 data-aos="fade-down">Selamat Ulang Tahun, Meyda!</h1>
+  <h1 data-aos="fade-down">Selamat Ulang Tahun, Meyda! 🎂</h1>
 
   <div class="message" data-aos="fade-up">
-    <p>Semoga hari ini dan seterusnya penuh kebahagiaan dan cinta. Kamu adalah orang yang luar biasa!</p>
+    <p>Semoga kamu diberi kemudahan dalam segala hal, dibanyakkan rezekinya, dan diberi kesehatan.</p>
     <p>Terima kasih sudah menjadi bagian dari kenangan indah. Semoga semua impianmu terkabul.</p>
-    <p>Terima kasih juga sudah menerima aku yah hehe luv u</p>
+    <p>Terima kasih sudah mau terima aku selama ini walaupun aku banyak salah (banyak banget).</p>
+    <p>Love youu meyda</p>
   </div>
 
   <img src="Ultah.jpg" alt="Foto Ulang Tahun Meyda" class="birthday-img" data-aos="fade-up" />
 
-  <a href="index.html" class="next-button" data-aos="fade-up">Kembali ke Kenangan</a>
+  <!-- Audio -->
+  <audio id="bg-music" loop>
+    <source src="Bima Tarore - Selamat Ulang Tahun (Official Music Video).mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Tombol Kontrol Musik -->
+  <div style="margin-top: 2rem;">
+    <button onclick="toggleMusic()" class="next-button">⏯ Putar / Jeda Lagu</button>
+  </div>
+
+  <a href="index.html" class="next-button" data-aos="fade-up">⬅ Kembali ke Kenangan</a>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
+    AOS.init({ duration: 1000, once: true });
+
+    const bgMusic = document.getElementById("bg-music");
+
+    // ✅ AUTOPLAY saat halaman dibuka
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(() => {
+        bgMusic.play().catch(error => console.log("Autoplay dicegah browser:", error));
+      }, 500); // Sedikit delay agar tidak dianggap autoplay paksa
     });
+
+    // ✅ Fungsi Play / Pause Manual
+    function toggleMusic() {
+      if (bgMusic.paused) {
+        bgMusic.play();
+      } else {
+        bgMusic.pause();
+      }
+    }
   </script>
 
 </body>
