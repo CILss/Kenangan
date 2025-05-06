@@ -22,8 +22,27 @@
     }
 
     h1 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-size: 1.8rem;
+    }
+
+    .music-control {
+      margin-bottom: 2rem;
+    }
+
+    .music-button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .music-button:hover {
+      background-color: #1976d2;
     }
 
     .gallery {
@@ -85,7 +104,7 @@
       .caption {
         font-size: 0.95rem;
       }
-      .next-button {
+      .next-button, .music-button {
         font-size: 0.95rem;
         padding: 0.6rem 1.2rem;
       }
@@ -96,13 +115,24 @@
 
   <h1 data-aos="fade-down">Kenangan...</h1>
 
+  <!-- Tombol Musik -->
+  <div class="music-control" data-aos="fade-down">
+    <button class="music-button" onclick="toggleMusic()">🎵 Putar / Jeda Lagu</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop>
+    <source src="Runtuh - Feby Putri feat. Fiersa Besari (Official Visualizer).mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
   <div class="gallery">
-    <!-- Foto-foto diisi di sini, contoh satu di bawah -->
+    <!-- Semua photo-card tetap sama seperti sebelumnya -->
     <div class="photo-card" data-aos="fade-up">
       <img src="Photobox.jpg" alt="Foto Photobox" />
       <div class="caption">Ini photobox pertama kali dalam seumur hidup dan bersama meyda</div>
     </div>
-    
+   
     <div class="photo-card" data-aos="fade-up">
       <img src="1.jpg" alt="Foto Photobox" />
       <div class="caption">Ini pas dipeluk Meyda pertama kali, seneng parah</div>
@@ -149,12 +179,24 @@
     </div>
   </div>
 
+  </div>
+
   <a href="Ultah.html" class="next-button" data-aos="fade-up">Selanjutnya ➡</a>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
+
+    const music = document.getElementById("bgMusic");
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
   </script>
 
 </body>
