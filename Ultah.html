@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selamat Ulang Tahun, Meyda!</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffe0f0;
+      padding: 1rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ff4081;
+      margin-bottom: 1.5rem;
+    }
+
+    .message {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .birthday-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .next-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .next-button:hover {
+      background-color: #e73370;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .message {
+        font-size: 1.1rem;
+      }
+      .next-button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 data-aos="fade-down">Selamat Ulang Tahun, Meyda!</h1>
+
+  <div class="message" data-aos="fade-up">
+    <p>Semoga hari ini dan seterusnya penuh kebahagiaan dan cinta. Kamu adalah orang yang luar biasa!</p>
+    <p>Terima kasih sudah menjadi bagian dari kenangan indah. Semoga semua impianmu terkabul.</p>
+    <p>Terima kasih juga sudah menerima aku yah hehe luv u</p>
+  </div>
+
+  <img src="Ultah.jpg" alt="Foto Ulang Tahun Meyda" class="birthday-img" data-aos="fade-up" />
+
+  <a href="index.html" class="next-button" data-aos="fade-up">Kembali ke Kenangan</a>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

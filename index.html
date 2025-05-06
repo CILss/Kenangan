@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kenangan Bersama Meyda</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f2f2f2;
+      padding: 1rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+    }
+
+    .photo-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 100%;
+      max-width: 320px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      padding: 1rem;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .next-button {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .next-button:hover {
+      background-color: #e73370;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .caption {
+        font-size: 0.95rem;
+      }
+      .next-button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 data-aos="fade-down">Kenangan...</h1>
+
+  <div class="gallery">
+    <!-- Foto-foto diisi di sini, contoh satu di bawah -->
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Photobox.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini photobox pertama kali dalam seumur hidup dan bersama meyda</div>
+    </div>
+    
+    <div class="photo-card" data-aos="fade-up">
+      <img src="1.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini pas dipeluk Meyda pertama kali, seneng parah</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Sepupu.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini Meyda lagi nongki sama sepupunya... kok bisa sih kamu cantik begituu meyy!!</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Nugas.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini pas lagi nemenin meyda nugas...</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Pap2.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini dapat pap dari meyda yang imutt nan cantik!!!</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="VC.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini VC terlama yang pernah kita berdua lakuin si dan seru bgtt!!</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Pap3.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini dapat pap (sbnrnya nyolong si aku ss dari ig) pas meyda lagi nugas di upz space</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Pap4.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini aku juga nyolong lagi pap meyda karna sudah pasti dikirim sekali liat di IG</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Imut.jpg" alt="Foto Photobox" />
+      <div class="caption">Imut banget sii</div>
+    </div>
+
+    <div class="photo-card" data-aos="fade-up">
+      <img src="Papterakhir.jpg" alt="Foto Photobox" />
+      <div class="caption">Ini pap terakhir yang meyda kasi, jujur sedih dan nyesek banget sih umm...</div>
+    </div>
+  </div>
+
+  <a href="Ultah.html" class="next-button" data-aos="fade-up">Selanjutnya ➡</a>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+</body>
+</html>
